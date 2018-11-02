@@ -17,7 +17,7 @@
 
   <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbynMvuU6o0JkNte-0Z2kIDahDkWvO2nHlkxPG_-RA/exec">
-        <h4>How Was You Experience Today?</h4>
+        <h2>How Was Your Experience Today?</h2>
         
 
         
@@ -26,31 +26,31 @@
 <div id="checkboxes">
     
   <div class="checkboxgroup">
-    <label style="font-size:500%;" class="star" id="r1"  onclick="star1()"> 
+    <label style="font-size:600%;" class="star" id="r1"  onclick="star1()"> 
     <input data-val="true" data-val-number="The field Rating must be a number." data-val-required="The Rating field is required." id="Rating" name="Rating" type="radio" value="1" />★ </label>
     <label style="padding-left: 20%">Poor</label> 
   </div>
     
   <div class="checkboxgroup">
-    <label style="font-size:500%;" class="star" id="r2" onclick="star2()"> 
+    <label style="font-size:600%;" class="star" id="r2" onclick="star2()"> 
     <input id="Rating" name="Rating" type="radio" value="2" />★ </label>
     <label style="padding-left: 20%">Fair </label>      
   </div>
     
   <div class="checkboxgroup">
-    <label style="font-size:500%;" class="star" id="r3" onclick="star3()"> 
+    <label style="font-size:600%;" class="star" id="r3" onclick="star3()"> 
     <input id="Rating" name="Rating" type="radio" value="3" />★ </label>
     <label style="padding-left: 20%">Good</label>
   </div>
     
   <div class="checkboxgroup">
-    <label style="font-size:500%;" class="star" id="r4" onclick="star4()"> 
+    <label style="font-size:600%;" class="star" id="r4" onclick="star4()"> 
     <input id="Rating" name="Rating" type="radio" value="4" />★ </label>
     <label style="padding-left: 20%">Very Good</label>      
   </div>
     
   <div class="checkboxgroup">
-    <label style="font-size:500%;" class="star" id="r5" onclick="star5()">
+    <label style="font-size:600%;" class="star" id="r5" onclick="star5()">
     <input id="Rating" name="Rating" type="radio" value="5" />★ </label>
     <label style="padding-left: 20%">Exellent</label>      
   </div>
@@ -59,7 +59,7 @@
             <br>
 
         <div id="fade2" >
-            <label>Based on your experience, please share any feedback or comments you have</label>
+            <label style="font-size: 21px">Based on your experience, please share any feedback or comments you may have.</label>
             <div>
                 <br>
                 <textarea cols="20" id="message" name="message" rows="2"> </textarea>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="form-group" id="fade3" >
-                <input type="submit" value="Submit Rating" onclick="myFunction()" />
+                <input type="submit" value="Submit" onclick="myFunction()" />
         </div>
     </div>
       
@@ -90,55 +90,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
-
     $(".star").click(function () {
         $("#fade1").slideDown("slow");
         $("#fade2").slideDown("slow");
         $("#fade3").slideDown("slow");
         
     });
-
     $("#r1,#r2,#r3,#r4,#r5").click(function () {
         $("#r1,#r2,#r3,#r4,#r5").animate({
-            fontSize: "500%"
+            fontSize: "600%"
             },1000);
     });
-
     function myFunction() {
         document.getElementById("contents").style.display="none";
     }
-
     function star1() {
         var all = document.getElementById("checkboxes").querySelectorAll(".star");
         var stars = document.getElementById("r1");
         if (stars.style.color = "white") {
             stars.style.color = "gold";
         }
-
         if (document.getElementById("r2").style.color = "gold") {
             document.getElementById("r2").style.color = "white";
             document.getElementById("r3").style.color = "white";
             document.getElementById("r4").style.color = "white";
             document.getElementById("r5").style.color = "white";
         }
-
-
-
     }
-
     function star2() {
         star1();
         var stars = document.getElementById("r2");
         stars.style.color = "gold";
     }
-
     function star3() {
         star1();
         star2();
         var stars = document.getElementById("r3");
         stars.style.color = "gold";
     }
-
     function star4() {
         star1();
         star2();
@@ -146,7 +135,6 @@
         var stars = document.getElementById("r4");
         stars.style.color = "gold";
     }
-
     function star5() {
         star1();
         star2();
@@ -174,6 +162,7 @@
         }
     
     #fade3 input{
+        font-size: 110%;
         padding: 15px 15px;
         }
     
@@ -201,42 +190,32 @@
     #rate{
         width: 100%;  
     }
-
     label input {
         visibility: hidden;
     }
-
-
     #rate:hover {
         color: gold;
     }
-
     .star {
         color: white;
     }
-
     .star.checked {
         background-color: gold;
     }
-
     .rating.checked ~ label input {
         background: #ff0000;
         color: gold;
     }
-
     .navbar {
         //visibility:hidden;
     }
-
     html {
         background: url("surveyWall.jpg") no-repeat center center fixed;
         background-size: cover;
     }
-
     #r1{
        font-size: 500%;
     }
-
     #message{
         height: 150px;
         width: 300px;

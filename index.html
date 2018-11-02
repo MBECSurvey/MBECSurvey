@@ -13,15 +13,17 @@
 <body>
     <div class="container body-content" id="form-group">
 
-<h2>Thank you for visiting the Mississauga Business Enterprise Centre (MBEC)! </h2>
-
-  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbynMvuU6o0JkNte-0Z2kIDahDkWvO2nHlkxPG_-RA/exec">
-        <h2>How Was Your Experience Today?</h2>
+<h2 >Thank you for visiting the Mississauga Business Enterprise Centre (MBEC)! </h2>
+        
+        <br>
+        <br>
         
 
+  <form class="gform pure-form pure-form-stacked" method="POST" 
+  action="https://script.google.com/macros/s/AKfycbynMvuU6o0JkNte-0Z2kIDahDkWvO2nHlkxPG_-RA/exec">
         
         <div id="contents">
+            <p class="exp" style="font-size: 30px">How Was Your Experience Today?</p>
       
 <div id="checkboxes">
     
@@ -57,11 +59,13 @@
     
 </div>
             <br>
+            <br>
+            <br>
 
         <div id="fade2" >
             <label style="font-size: 21px">Based on your experience, please share any feedback or comments you may have.</label>
             <div>
-                <br>
+                
                 <textarea cols="20" id="message" name="message" rows="2"> </textarea>
                 <span class="field-validation-valid text-danger" data-valmsg-for="message" data-valmsg-replace="true"></span>
             </div>
@@ -147,6 +151,11 @@
         
 
 <style>
+    
+    .exp{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
      
     .checkboxgroup {
         display: inline-block;
@@ -179,6 +188,7 @@
     }
     
     #form-group{
+        font: Verdana, sans-serif;
         margin: 0 auto;
         text-align:center;
         width: 70%;
@@ -217,8 +227,8 @@
        font-size: 500%;
     }
     #message{
-        height: 150px;
-        width: 300px;
+        height: 180px;
+        width: 75%;
     }
 </style>
     <div>

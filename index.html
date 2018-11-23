@@ -13,7 +13,7 @@
 <body>
     <div class="container body-content" id="form-group">
 
-<h2 >Thank you for visiting the Mississauga Business Enterprise Centre (MBEC)! </h2>
+<h2 id="head" >Thank you for visiting the Mississauga Business Enterprise Centre (MBEC)! </h2>
         
         <br>
         <br>
@@ -66,21 +66,22 @@
             <label style="font-size: 21px">Based on your experience, please share any feedback or comments you may have.</label>
             <div>
                 
-                <textarea cols="20" id="message" name="message" rows="2"> </textarea>
+                <textarea cols="20" id="message" name="message" rows="2"></textarea>
                 <span class="field-validation-valid text-danger" data-valmsg-for="message" data-valmsg-replace="true"></span>
             </div>
         </div>
 
         <div class="form-group" id="fade3" >
-                <input type="submit" value="Submit" onclick="myFunction()" />
+                <input type="submit" value="Submit" onclick="myFunction(); refreshFunction()" />
         </div>
     </div>
       
       
        <!-- Customise the Thankyou Message People See when they submit the form: -->
           <div class="thankyou_message" style="display:none;">
-      <h2>thank you for your submission!</h2>
-        <p><a href="https://mbecsurvey.github.io/MBECSurvey/"> click here to return to the survey! </a></p>
+      <h2>Thank you for sharing your feedback with us</h2>
+        <p>The Page will auto Refresh.</p>
+        <p><a href="index.html"> click here to return to the survey! </a></p>
 <!--        <p><a href="SurveyPage.html"> click here to return to the survey! </a></p>-->
     </div>
 
@@ -94,6 +95,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
+    
+    function refreshFunction() {
+        timeoutID = window.setTimeout("location.href = 'index.html'",6000);
+    }
     $(".star").click(function () {
         $("#fade1").slideDown("slow");
         $("#fade2").slideDown("slow");
@@ -107,6 +112,7 @@
     });
     function myFunction() {
         document.getElementById("contents").style.display="none";
+        document.getElementById("head").style.visibility="hidden";
     }
     function star1() {
         var all = document.getElementById("checkboxes").querySelectorAll(".star");
@@ -151,6 +157,12 @@
         
 
 <style>
+    
+        textarea{
+        resize: none;
+        font-size: 24px; 
+        font-family: "arial" ,sans-serif ;
+    }
     
     .exp{
         margin-top: 0;
